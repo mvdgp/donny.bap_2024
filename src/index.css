@@ -13,6 +13,7 @@ code {
 }
 
 * {
+  font-family: 'Gothic A1', sans-serif;
   overflow-x: hidden;
   scrollbar-width: none;
   -ms-overflow-style: none;
