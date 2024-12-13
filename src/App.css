@@ -1,0 +1,43 @@
+/* Main app styles */
+
+.App {
+  height: 100dvh;
+  width: 100dvw;
+  background-color: #F07B1C40;
+}
+
+.App::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('./assets/marble.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: -1;
+  pointer-events: none;
+}
+
+/* Header and body styles */
+
+.App-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 7dvh;
+}
+
+.App-body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 93dvh;
+}
+
+/* Temporary test styles */
+.App-header, .App-body {
+  border: 1px solid red;
+}
