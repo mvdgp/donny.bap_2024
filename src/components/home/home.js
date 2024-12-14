@@ -2,7 +2,6 @@ import React from 'react';
 import './home.css';
 import dishTofu from '../../assets/tofu_side.png';
 import dishBeef from '../../assets/beef_side.png';
-import logo from '../../assets/Donnybap-logo resizable.svg';
 import { FaInstagram } from "react-icons/fa";
 import { FaAngleDoubleDown } from "react-icons/fa";
 
@@ -23,11 +22,14 @@ const Home = () => {
     return (
         <main className="home">
             <div className="home-content">
-                {/*<div className="home-text">
-                    <h1 className="slogan">Bibimbap.<br/>Donny's way.</h1>
-                    <h4 className="subtitle">EVERY SATURDAY & SUNDAY</h4>
+                <div className="home-text">
+                    <div className="logo-container">
+                        <h1 className="slogan">Bibimbap.<br/>Donny's way.</h1>
+                        <h4 className="subtitle">EVERY SATURDAY & SUNDAY</h4>
+                    </div>
+                    
                     <button className="social-button" onClick={clickSocialButton}><FaInstagram />FOLLOW</button>
-                </div>*/}
+                </div>
                 <div className="logo">
                         {/*
                         <img src={dishTofu} alt="tofu-side" className="dish-tofu" />
