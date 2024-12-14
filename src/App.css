@@ -31,13 +31,21 @@
 }
 
 .App-body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   height: 93dvh;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+}
+
+/* Page styles */
+
+.App-body > * {
+  scroll-snap-align: start;
+  height: 100%;
+  width: 100%;
 }
 
 /* Temporary test styles */
+
 .App-header, .App-body {
   border: 1px solid red;
 }
