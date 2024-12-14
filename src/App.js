@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useState } from 'react';
 import './App.css';
 import TitleBar from './components/titlebar/titlebar';
 import Home from './components/home/home';
@@ -6,10 +6,16 @@ import Menu from './components/menu/menu';
 import Location from './components/location/location';
 import Contact from './components/contact/contact';
 
-function App() {
+// App menu items
+const sections = [
+  { id: 'home', label: 'Home', component: Home },
+  { id: 'menu', label: 'Menu', component: Menu },
+  { id: 'location', label: 'Location', component: Location },
+  { id: 'contact', label: 'Contact', component: Contact },
+];
 
-  const [activeSection, setActiveSection] = useState('');
-  const sectionsRef = useRef({});
+// Handle intersection observer for pagination
+function useIntersectionObserver(setActiveSection) {
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -21,25 +27,34 @@ function App() {
 
     document.querySelectorAll('.App-body > div').forEach((section) => {
       observer.observe(section);
-      sectionsRef.current[section.id] = section;
     });
 
     return () => observer.disconnect();
-  }, []);
+  }, [setActiveSection]);
+  
+}
+
+// Main App component
+function App() {
+
+  const [activeSection, setActiveSection] = useState('home'); // Set default active section
+  useIntersectionObserver(setActiveSection);
 
   return (
     <div className="App">
       <header className="App-header">
-        <TitleBar />
+        <TitleBar activeSection={activeSection} sections={sections} />
       </header>
       <main className="App-body">
-      <div id="home" className={activeSection === 'home' ? 'active' : ''}><Home /></div>
-        <div id="menu" className={activeSection === 'menu' ? 'active' : ''}><Menu /></div>
-        <div id="location" className={activeSection === 'location' ? 'active' : ''}><Location /></div>
-        <div id="contact" className={activeSection === 'contact' ? 'active' : ''}><Contact /></div>
+        {sections.map(({ id, component: Component }) => (
+          <div key={id} id={id} className={activeSection === id ? 'active' : ''}>
+            <Component />
+          </div>
+        ))}
       </main>
     </div>
   );
+
 }
 
 export default App;

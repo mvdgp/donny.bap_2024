@@ -1,24 +1,26 @@
 import React from 'react';
 import './titlebar.css';
 
-const TitleBar = ({ activeSection }) => {
-    
-    const handleNavClick = (event) => {
-        event.preventDefault();
-        const targetId = event.currentTarget.getAttribute('href').substring(1);
-        const targetElement = document.getElementById(targetId);
-        targetElement.scrollIntoView({ behavior: 'smooth' , block: 'end'});
-    };
+// Handle navigation click event
+const handleNavClick = (event) => {
+    event.preventDefault();
+    const targetId = event.currentTarget.getAttribute('href').substring(1);
+    const targetElement = document.getElementById(targetId);
+    targetElement.scrollIntoView({ behavior: 'smooth' , block: 'end'});
+};
 
+// Main Titlebar component
+const TitleBar = ({ activeSection, sections }) => {
     return (
-            <nav className="titlebar">
-               <ul className="nav-list">
-                    <li className={`nav-item ${activeSection === 'home' ? 'active' : ''}`}><a href="#home" onClick={handleNavClick}>Home</a></li>
-                    <li className={`nav-item ${activeSection === 'menu' ? 'active' : ''}`}><a href="#menu" onClick={handleNavClick}>Menu</a></li>
-                    <li className={`nav-item ${activeSection === 'location' ? 'active' : ''}`}><a href="#location" onClick={handleNavClick}>Location</a></li>
-                    <li className={`nav-item ${activeSection === 'contact' ? 'active' : ''}`}><a href="#contact" onClick={handleNavClick}>Contact</a></li>
-                </ul>
-            </nav>
+        <nav className="titlebar">
+            <ul className="nav-list">
+                {sections.map(({ id, label }) => (
+                    <li key={id} className={`nav-item ${activeSection === id ? 'active' : ''}`}>
+                        <a href={`#${id}`} onClick={handleNavClick}>{label}</a>
+                    </li>
+                ))}
+            </ul>
+        </nav>
     );
 };
 

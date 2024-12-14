@@ -5,7 +5,7 @@
     padding: 0.5rem 1rem;
 }
 
-.titlebar ul {
+.nav-list {
     display: flex;
     width: 100%;
     padding: 0;
@@ -17,10 +17,22 @@
 
 /* Navigation item styles */
 
-.titlebar li {
+.nav-item {
+    margin: 0 10px;
 }
 
-.titlebar a {
+.nav-item a {
     text-decoration: none;
     color: inherit;
+}
+
+/* Navigation item state styles */
+
+.nav-item:hover {
+    font-weight: bold;
+}
+
+.nav-item.active a {
+    font-weight: bold;
+    color: var(--primary-color);
 }

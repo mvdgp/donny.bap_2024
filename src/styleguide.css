@@ -1,0 +1,23 @@
+/* Global Variables */
+
+:root {
+  /* Fonts */
+  --font-family: 'Gothic A1', sans-serif;
+
+  /* Colors */
+  --primary-color: #F07B1C;
+}
+
+/* Global Styles */
+
+* {
+  font-family: var(--font-family);
+  overflow-x: hidden;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  box-sizing: border-box;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
