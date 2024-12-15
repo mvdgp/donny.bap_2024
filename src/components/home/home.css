@@ -24,7 +24,12 @@
     z-index: 1;
 }
 
-.logo {
+.white-circle {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
     width: 75vw;
     height: 75vw;
     max-width: 75vh;
@@ -34,12 +39,137 @@
     z-index: 0;
 }
 
+.dish {
+    position: absolute;
+    width: 65%;
+    opacity: 0;
+}
+
+.donny-logo {
+    width: 100%;
+}
+
+.arrow {
+    position:absolute;
+    color: var(--primary-color);
+    width: 14px;
+    bottom: 20px;
+    opacity: 0;
+}
+
+/* Applied animations */
+
+.dish-beef {
+    animation: fadeIn 1s forwards, alternateOpacity 10s infinite, swapDish 5s infinite;
+    animation-delay: 5s, 7s, 4.5s;
+}
+
+.dish-tofu {
+    animation: fadeIn 1s forwards, alternateOpacity 10s infinite, swapDish 5s infinite;
+    animation-delay: 6s, 2s, 4.5s;
+}
+
+.white-circle {
+    animation: scaleAnimation 4s;
+}
+
+.donny-logo {
+    animation: fadeOut 1s forwards;
+    animation-delay: 3.8s; /* Delay to match the duration of scaleAnimation */
+}
+
+.arrow {
+    animation: scaleArrow 1s infinite, fadeIn 1s forwards;
+    animation-delay: 3s, 3s; /* Delay to match the duration of scaleAnimation */
+}
+
+/* Animations */
+
+@keyframes alternateOpacity {
+    0% {
+        opacity: 0;
+    }
+    49.9% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes swapDish {
+    0% {
+        transform: translateX(0);
+    }
+    35% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(125%);
+    }
+    65% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes scaleAnimation {
+    0% {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    10% {
+        opacity: 1;
+    }
+    25% {
+        transform: scale(1.05);
+    }
+    50% {
+        transform: scale(1);
+    }
+}
+
+@keyframes scaleArrow {
+    0% {
+        transform: scale(1.5);
+    }
+    50% {
+        transform: scale(1.75);
+    }
+    100% {
+        transform: scale(1.5);
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
 /* Media styles */
 
 /* Tablets */
 @media (min-width: 768px) {
 
-    .logo {
+    .white-circle {
         max-width: 60vh;
         max-height: 60vh;
     }
