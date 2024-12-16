@@ -36,3 +36,10 @@
     font-weight: bold;
     color: var(--primary-color);
 }
+
+@media (min-width: 1024px) {
+    .nav-list {
+        justify-content: end;
+        gap: 4rem;
+    }
+}

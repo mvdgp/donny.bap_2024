@@ -42,6 +42,7 @@ function App() {
 
   return (
     <div className="App">
+      <div className={`white-circle-body ${activeSection}`}></div>
       <header className="App-header">
         <TitleBar activeSection={activeSection} sections={sections} />
       </header>
