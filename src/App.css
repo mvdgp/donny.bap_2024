@@ -5,6 +5,7 @@
   width: 100dvw;
   background-color: #F07B1C40;
   position: relative;
+  overflow: hidden;
 }
 
 .App::before {
@@ -79,7 +80,7 @@
 }
 
 .white-circle-body {
-  background-color: white;
+  background-color: #FFFFFF;
   position: absolute;
   pointer-events: none;
   z-index: 1;
@@ -95,28 +96,35 @@
 .white-circle-body.menu {
   top: 40%;
   left: 50%;
-  width: 60dvh;
+  width: 80dvh;
   height: 60dvh;
-  border-radius: 50%;
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
   transform: translate(-50%);
   clip-path: inset(0 0 0 0);
   opacity: 1;
 }
 
 .white-circle-body.location {
-  background-color: lightcoral;
+  left: 50%;
+  width: 80dvh;
+  height: 50dvh;
+  border-bottom-left-radius: 50%;
+  border-bottom-right-radius: 50%;
+  transform: translate(-50%);
+  clip-path: inset(0 0 0 0);
   opacity: 1;
 }
 
 .white-circle-body.contact {
-  background-color: lightgoldenrodyellow;
+  left: 50%;
+  top: 10dvh;
+  transform: translate(-50%);
+  width: 80dvh;
+  height: 80dvh;
+  border-radius: 50%;
+  clip-path: inset(0 0 0 0);
   opacity: 1;
-}
-
-/* Temporary test styles */
-
-.App-header, .App-body {
-  border: 1px solid red;
 }
 
 /* MEDIA STYLES */
@@ -133,8 +141,23 @@
     left: 10%;
     height: 120dvh;
     width: 120dvh;
-    border-bottom-left-radius: 0;
-    border-top-left-radius: 0;
+    border-bottom-right-radius: 50%;
   }
+
+  .white-circle-body.location {
+    top: -10%;
+    left: 85%;
+    height: 120dvh;
+    width: 120dvh;
+    border-top-left-radius: 50%;
+    border-bottom-right-radius: 0;
+  }
+
   
+  .white-circle-body.contact {
+    top: -10dvh;
+    width: 120dvh;
+    height: 120dvh;
+    clip-path: inset(0 0 0 0);
+  }
 }

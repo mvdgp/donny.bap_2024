@@ -42,15 +42,21 @@ function App() {
 
   return (
     <div className="App">
+
+      {/* FIXED ELEMENTS */}
       <div className={`white-circle-body ${activeSection}`}></div>
       <div className="page-indicator">
         {sections.map(({ id }) => (
           <div key={id} className={`indicator ${activeSection === id ? 'active' : ''}`}></div>
         ))}
       </div>
+
+      {/* APP HEADER */}
       <header className="App-header">
         <TitleBar activeSection={activeSection} sections={sections} />
       </header>
+
+      {/* MAIN BODY CONTENT */}
       <main className="App-body">
         {sections.map(({ id, component: Component }) => (
           <div key={id} id={id} className={activeSection === id ? 'active' : ''}>
@@ -58,6 +64,7 @@ function App() {
           </div>
         ))}
       </main>
+      
     </div>
   );
 

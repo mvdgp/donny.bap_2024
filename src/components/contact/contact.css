@@ -14,7 +14,6 @@
 
 .donny-logo-contact {
     height: 40%;
-    animation: logoRotate 5s linear infinite;
 }
 
 .slogan-contact {
@@ -56,3 +55,6 @@
 }
 
 /* APPLIED ANIMATIONS */
+.donny-logo-contact {
+    animation: logoRotate 5s linear infinite;
+}
