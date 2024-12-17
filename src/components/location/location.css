@@ -1,0 +1,45 @@
+/* LAYOUT STYLES */
+
+.location-container {
+    display: flex;
+    flex-direction: column-reverse;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.location-container > * {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* CONTENT STYLES */
+.blok-noord-gmap {
+    border-radius: 20px;
+    width: 90%;
+    height: 90%;
+}
+
+.location-info {
+    text-align: center;
+    transform: scale(1.2);
+}
+
+.sat-sun {
+    color: var(--primary-color);
+}
+
+@media (min-width: 1024px) {
+    .location-container {
+        flex-direction: row;
+    }
+
+    .blok-noord-gmap {
+        border-radius: 20px;
+        width: 80%;
+        height: 80%;
+    }
+}

@@ -1,0 +1,58 @@
+/* LAYOUT STYLES */
+
+.contact-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* CONTENT STYLES */
+
+.donny-logo-contact {
+    height: 40%;
+    animation: logoRotate 5s linear infinite;
+}
+
+.slogan-contact {
+    padding: 3% 0;
+}
+
+.pop-up {
+    font-family: 'Gothic A1', sans-serif;
+    font-size: 25px;
+    font-weight: 300;
+    color: #353535;
+    margin-bottom: 10px;
+}
+
+.bap-up {
+    font-family: 'Gothic A1', sans-serif;
+    font-weight: 600;
+    font-size: 35px;
+    color: #353535;
+    text-shadow:
+        -2px -2px 0 #FFFFFF,  
+         2px -2px 0 #FFFFFF,
+        -2px  2px 0 #FFFFFF,
+         2px  2px 0 #FFFFFF;
+}
+
+/* ANIMATIONS */
+
+@keyframes logoRotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    15% {
+        transform: rotate(360deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* APPLIED ANIMATIONS */

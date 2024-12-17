@@ -43,6 +43,11 @@ function App() {
   return (
     <div className="App">
       <div className={`white-circle-body ${activeSection}`}></div>
+      <div className="page-indicator">
+        {sections.map(({ id }) => (
+          <div key={id} className={`indicator ${activeSection === id ? 'active' : ''}`}></div>
+        ))}
+      </div>
       <header className="App-header">
         <TitleBar activeSection={activeSection} sections={sections} />
       </header>

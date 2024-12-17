@@ -1,4 +1,81 @@
+/* LAYOUT STYLES */
+
 .menu {
+    display: flex;
+    flex-direction: column;
     height: 100%;
     width: 100%;
+    overflow: hidden;
+}
+
+.description {
+    display: flex;
+    flex: 1.25;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.dishes {
+    flex: 0.75;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5%;
+    padding: 2%;
+}
+
+/* CONTENT STYLES */
+
+.beef-or-tofu {
+    display: flex;
+    align-items: flex-end;
+    gap: 5px;
+}
+
+.beef-or-tofu .or {
+    color: black;
+}
+
+.dish-beef-top, .dish-tofu-top {
+    width: 35%;
+    transition: transform 0.3s ease-in-out;
+}
+
+.dish-beef-top:hover, .dish-tofu-top:hover {
+    transform: scale(1.05);
+}
+
+/* MEDIA STYLES */
+
+@media (min-width: 1024px) {
+    .menu {
+        flex-direction: row-reverse;
+    }
+
+    .description {
+        flex: none;
+        width: 35%;
+        transform: scale(1.2);
+        padding-left: 8%;
+        text-align: start;
+        align-items: flex-start;
+    }
+
+    .dishes {
+        flex: none;
+        flex-direction: column;
+        width: 65%;
+        gap: 2%;
+    }
+
+    .dish-beef-top, .dish-tofu-top {
+        transform: scale(0.8);
+        object-fit: contain;
+    }
+
+    .dish-beef-top:hover, .dish-tofu-top:hover {
+        transform: scale(0.85);
+    }
 }
