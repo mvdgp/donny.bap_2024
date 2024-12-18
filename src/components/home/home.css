@@ -50,12 +50,14 @@
 }
 
 .logo-container {
+    opacity: 0;
     order: 1;
     margin-bottom: -10vw;
     z-index: 1;
 }
 
 .social-button {
+    opacity: 0;
     order: 3;
     margin-top: -5vw;
     z-index: 1;
@@ -95,7 +97,39 @@
     animation-delay: 3s, 3s; /* Delay to match the duration of scaleAnimation */
 }
 
+.logo-container, .social-button {
+    animation: introSlogan 1s forwards;
+    animation-delay: 4s; /* Delay to match the duration of scaleAnimation */
+}
+
 /* Animations */
+
+@keyframes moveCircle {
+    0% {
+        transform: translateX(-25%) scale(0);
+    }
+    15% {
+        transform: translateX(-25%) scale(1.05);
+    }
+    30% {
+        transform: translateX(-25%) scale(1);
+    }
+    80% {
+        transform: translateX(-25%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes introSlogan {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
 
 @keyframes alternateOpacity {
     0% {
@@ -212,11 +246,13 @@
     }
 
     .white-circle {
+        transform: translateX(-25%);
         order: 3;
         max-width: 25vw;
         max-height: 25vw;
         position: relative;
         z-index: 1;
+        animation: moveCircle 4.5s forwards;
     }
 
     .home-content {
