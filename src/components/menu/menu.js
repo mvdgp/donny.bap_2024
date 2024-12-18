@@ -2,6 +2,7 @@ import React from 'react';
 import './menu.css';
 import dishBeef from '../../assets/beef_top.png';
 import dishTofu from '../../assets/tofu_top.png';
+import { LuVegan } from "react-icons/lu";
 
 const Menu = () => {
     return (
@@ -16,7 +17,7 @@ const Menu = () => {
                 <div className="beef-or-tofu">
                     <h2><b>Beef</b></h2>
                     <h2 className="or">or</h2>
-                    <h2><b>Tofu</b></h2>
+                    <h2><b>Tofu</b><LuVegan className="vegan-logo" /></h2>
                 </div>
                 <br/>
                 <h4>Always comes with</h4>

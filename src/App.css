@@ -1,5 +1,17 @@
 /* Main app styles */
 
+@keyframes fadeInOutApp {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 .App {
   height: 100dvh;
   width: 100dvw;
@@ -90,7 +102,7 @@
 
 /* Styles for different sections */
 .white-circle-body.home {
-  opacity: 0;
+  opacity: 1;
 }
 
 .white-circle-body.menu {
@@ -103,6 +115,7 @@
   transform: translate(-50%);
   clip-path: inset(0 0 0 0);
   opacity: 1;
+  transition: opacity 0.5s ease-in-out;
 }
 
 .white-circle-body.location {
@@ -114,6 +127,7 @@
   transform: translate(-50%);
   clip-path: inset(0 0 0 0);
   opacity: 1;
+  transition: opacity 0.5s ease-in-out;
 }
 
 .white-circle-body.contact {
@@ -125,6 +139,7 @@
   border-radius: 50%;
   clip-path: inset(0 0 0 0);
   opacity: 1;
+  transition: opacity 0.5s ease-in-out;
 }
 
 /* MEDIA STYLES */

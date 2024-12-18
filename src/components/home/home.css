@@ -7,6 +7,7 @@
     justify-content: center;
     height: 100%;
 }
+
 .home-content {
     display: flex;
     flex-direction: column;

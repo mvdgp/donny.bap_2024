@@ -38,6 +38,13 @@
     color: black;
 }
 
+.vegan-logo {
+    color: green;
+    width: 15px;
+    stroke-width: 3px;
+    padding-left: 2px;
+}
+
 .dish-beef-top, .dish-tofu-top {
     width: 35%;
     transition: transform 0.3s ease-in-out;
