@@ -23,20 +23,18 @@ const Home = () => {
     return (
         <main className="home">
             <div className="home-content">
-
+                <div className="conditional-container">
                     <div className="logo-container">
                         <h1 className="slogan">Bibimbap.<br/>Donny's way.</h1>
                         <h4 className="subtitle">EVERY SATURDAY & SUNDAY</h4>
                     </div>
-                    
+                    <button className="social-button" onClick={clickSocialButton}><FaInstagram />FOLLOW</button>
+                </div>
                 <div className="white-circle">
                     <img src={logo} alt="Donnybap Logo" className="donny-logo" />
                     <img src={dishTofu} alt="tofu-side" className="dish-tofu dish" />
                     <img src={dishBeef} alt="beef-side" className="dish-beef dish" />
                 </div>
-
-                <button className="social-button" onClick={clickSocialButton}><FaInstagram />FOLLOW</button>
-                
             </div>
             <div className="arrow"><FaAngleDoubleDown /></div>
         </main>

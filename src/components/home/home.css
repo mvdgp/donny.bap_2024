@@ -32,6 +32,7 @@
     border-radius: 50%;
     background-color: #FFFFFF;
     z-index: 0;
+    order: 2;
 }
 
 .dish {
@@ -49,11 +50,13 @@
 }
 
 .logo-container {
+    order: 1;
     margin-bottom: -10vw;
     z-index: 1;
 }
 
 .social-button {
+    order: 3;
     margin-top: -5vw;
     z-index: 1;
 }
@@ -199,6 +202,8 @@
     .logo-container {
         order: 1;
         margin: 0;
+        margin-right: -4vw;
+        margin-bottom: 20px;
     }
 
     .social-button {
@@ -210,6 +215,8 @@
         order: 3;
         max-width: 25vw;
         max-height: 25vw;
+        position: relative;
+        z-index: 1;
     }
 
     .home-content {
@@ -217,16 +224,17 @@
         flex-direction: row;
     }
 
+    .conditional-container {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        overflow: visible;
+        z-index: 2;
+    }
 }
 
-
-/*
-
-TO DO's:
-
-- fade in logo-container and social-button after the white-circle animation
-- fix layout of logo-container and social-button for desktop
-- cross fade white-circles in .App.css for a smoother transition
-- see if i can fix iPad PRO layout cause it looks horrible (1024px width but height is too big)
-
-*/
+@media (max-width: 1023px) {
+    .conditional-container {
+        display: contents;
+    }
+}
