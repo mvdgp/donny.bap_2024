@@ -145,7 +145,7 @@
 /* MEDIA STYLES */
 
 /* Desktop */
-@media (min-width: 1024px) {
+@media (min-width: 1024px) and (max-height: 800px) {
 
   .page-indicator {
     opacity: 1;
