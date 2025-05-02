@@ -21,7 +21,7 @@ const Menu = () => {
                 </div>
                 <br/>
                 <h4>Always comes with</h4>
-                <p>pickled red cabbage<br/>danmuji<br/>sauteed white cabbage<br/>fresh carrots<br/>fresh cucumbers<br/>gochu-don</p>
+                <p>crisp carrots<br/>traditional danmuji<br/>bright red cabbage<br/>refreshing cucumber<br/>savory white cabbage<br/>signature gochu-don sauce</p>
                 <br/>
                 <h5>Allergies</h5>
                 <p>soy, sesame, gluten</p>
