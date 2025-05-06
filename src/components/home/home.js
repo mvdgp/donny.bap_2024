@@ -8,7 +8,7 @@ import { FaAngleDoubleDown } from "react-icons/fa";
 
 // Handle social button click
 const clickSocialButton = () => {
-    const url = 'https://www.instagram.com/donny.bap?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==';
+    const url = 'https://www.instagram.com/donnybap.nl?igsh=MXd2emwwbnc0bXpjdg==';
     const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
 
     if (isMobile) {
