@@ -14,8 +14,8 @@ const Location = () => {
             </div>
             <div className="location-info">
                 <p className="address">Tt. Melaniaweg 7<br/>1033 ST, Amsterdam</p><br/>
-                <p className="sat-sun"><b>Every Saturday & Sunday</b></p>
-                <p>Open between 12pm - 3pm</p>
+                <p className="sat-sun"><b>Every Thursday & Friday</b> 12.00 - 17.00</p>
+                <p className="sat-sun"><b>Saturday & Sunday </b>12.00 - 16.00</p>
             </div>
         </div>
     );
