@@ -26,7 +26,7 @@ const Home = () => {
                 <div className="conditional-container">
                     <div className="logo-container">
                         <h1 className="slogan">Bibimbap.<br/>Donny's way.</h1>
-                        <h4 className="subtitle">EVERY SATURDAY & SUNDAY</h4>
+                        <h4 className="subtitle">OPEN THURSDAYS TO SUNDAYS</h4>
                     </div>
                     <button className="social-button" onClick={clickSocialButton}><FaInstagram />FOLLOW</button>
                 </div>
